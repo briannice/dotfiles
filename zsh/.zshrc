@@ -4,21 +4,21 @@
 
 ZSH_DIR="$HOME/.config/zsh"
 
-if [[ ! -e "$ZSH_DIR/zsh-syntax-highlighting" ]]; then
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_DIR/zsh-syntax-highlighting"
-fi
+git_repos=(
+    catppuccin/zsh-syntax-highlighting
+    zsh-users/zsh-syntax-highlighting
+    zsh-users/zsh-autosuggestions
+)
 
-if [[ ! -e "$ZSH_DIR/zsh-autosuggestions" ]]; then
-    git clone https://github.com/zsh-users/zsh-autosuggestions.git "$ZSH_DIR/zsh-autosuggestions"
-fi
+for git_repo in "${git_repos[@]}"; do
+    if [[ ! -e "$ZSH_DIR/$git_repo" ]]; then
+        git clone "https://github.com/$git_repo.git" "$ZSH_DIR/$git_repo"
+    fi
+done
 
-if [[ ! -e "$ZSH_DIR/zsh-syntax-highlighting-catppuccin" ]]; then
-    git clone https://github.com/catppuccin/zsh-syntax-highlighting.git "$ZSH_DIR/zsh-syntax-highlighting-catppuccin"
-fi
-
-source "$ZSH_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$ZSH_DIR/zsh-syntax-highlighting-catppuccin/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
-source "$ZSH_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$ZSH_DIR/catppuccin/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
+source "$ZSH_DIR/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$ZSH_DIR/zsh-users/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # ----------------------------------------------------
 # NVM
