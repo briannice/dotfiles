@@ -17,28 +17,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # ----------------------------------------------------
-# Plugins
-# ----------------------------------------------------
-
-# ZSH_DIR="$HOME/.config/zsh"
-
-# git_repos=(
-#     catppuccin/zsh-syntax-highlighting
-#     zsh-users/zsh-syntax-highlighting
-#     zsh-users/zsh-autosuggestions
-# )
-
-# for git_repo in "${git_repos[@]}"; do
-#     if [[ ! -e "$ZSH_DIR/$git_repo" ]]; then
-#         git clone "https://github.com/$git_repo.git" "$ZSH_DIR/$git_repo"
-#     fi
-# done
-
-# source "$ZSH_DIR/catppuccin/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
-# source "$ZSH_DIR/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-# source "$ZSH_DIR/zsh-users/zsh-autosuggestions/zsh-autosuggestions.zsh"
-
-# ----------------------------------------------------
 # NVM
 # ----------------------------------------------------
 
@@ -62,6 +40,13 @@ case ":$PATH:" in
 *":$PNPM_HOME:"*) ;;
 *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# ----------------------------------------------------
+# Golang
+# ----------------------------------------------------
+
+export PATH="$PATH:/usr/local/go/bin"
+export GOPATH="$HOME/dev/go"
 
 # ----------------------------------------------------
 # Startship
