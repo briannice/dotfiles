@@ -54,6 +54,7 @@ export GOPATH="$HOME/dev/go"
 
 alias rkt="racket"
 alias r5rs="racket -I r5rs"
+alias r7rs="racket -I r7rs"
 
 # ----------------------------------------------------
 # Startship
