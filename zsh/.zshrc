@@ -49,8 +49,10 @@ export PATH="$PATH:/usr/local/go/bin"
 export GOPATH="$HOME/dev/go"
 
 # ----------------------------------------------------
-# Aliases
+# Racket
 # ----------------------------------------------------
+
+export PLTCOLLECTS="/home/brein/dev/vub/:$PLTCOLLECTS"
 
 alias rkt="racket"
 alias r5rs="racket -I r5rs"
