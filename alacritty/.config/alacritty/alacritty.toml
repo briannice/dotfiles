@@ -36,8 +36,7 @@ style = "Regular"
 [window]
 dynamic_padding = true
 resize_increments = true
+decorations = "full"
 
 [general]
 import = ["~/.config/alacritty/themes/catppuccin-macchiato.toml"]
-
-[terminal]
