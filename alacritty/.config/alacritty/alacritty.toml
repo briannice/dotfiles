@@ -1,4 +1,3 @@
-
 [terminal.shell]
 program = "/usr/bin/tmux"
 args = ["new-session", "-A", "-D", "-s", "main"]
@@ -37,6 +36,7 @@ style = "Regular"
 dynamic_padding = true
 resize_increments = true
 decorations = "full"
+decorations_theme_variant = "Dark"
 
 [general]
 import = ["~/.config/alacritty/themes/catppuccin-macchiato.toml"]

@@ -52,7 +52,7 @@ export GOPATH="$HOME/dev/go"
 # Racket
 # ----------------------------------------------------
 
-export PLTCOLLECTS="/home/brein/dev/vub/:$PLTCOLLECTS"
+export PLTCOLLECTS="$HOME/dev/vub/:$HOME/dev/vub/vub-ads/ads2-taak1/:$PLTCOLLECTS"
 
 alias rkt="racket"
 alias r5rs="racket -I r5rs"
