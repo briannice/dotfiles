@@ -20,6 +20,12 @@ source $ZSH/oh-my-zsh.sh
 # NVM
 # ----------------------------------------------------
 
+export PATH="$PATH:$HOME/bin"
+
+# ----------------------------------------------------
+# NVM
+# ----------------------------------------------------
+
 export NVM_DIR="$HOME/.config/nvm"
 
 if [ -s "$NVM_DIR/nvm.sh" ]; then
@@ -52,7 +58,8 @@ export GOPATH="$HOME/dev/go"
 # Racket
 # ----------------------------------------------------
 
-export PLTCOLLECTS="$HOME/dev/vub/:$HOME/dev/vub/vub-ads/ads2-taak1/:$PLTCOLLECTS"
+export PLTCOLLECTS="$HOME/dev/vub/:$PLTCOLLECTS"
+# export PLTCOLLECTS="$HOME/dev/vub/vub-ads/ads2-taak2/:$PLTCOLLECTS"
 
 alias rkt="racket"
 alias r5rs="racket -I r5rs"
