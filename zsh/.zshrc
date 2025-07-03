@@ -17,7 +17,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # ----------------------------------------------------
-# NVM
+# Scripts
 # ----------------------------------------------------
 
 export PATH="$PATH:$HOME/bin"
@@ -53,6 +53,14 @@ esac
 
 export PATH="$PATH:/usr/local/go/bin"
 export GOPATH="$HOME/dev/go"
+
+# ----------------------------------------------------
+# Rust
+# ----------------------------------------------------
+
+export PATH="$PATH:$HOME/.cargo/bin"
+
+source "$HOME/.cargo/env"
 
 # ----------------------------------------------------
 # Racket
