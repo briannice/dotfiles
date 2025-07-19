@@ -77,8 +77,7 @@ alias r7rs="racket -I r7rs"
 # Java
 # ----------------------------------------------------
 
-export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64/bin/java"
-export PATH="$PATH:$JAVA_HOME/bin"
+export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
 
 # ----------------------------------------------------
 # Scala
