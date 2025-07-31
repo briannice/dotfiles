@@ -86,6 +86,13 @@ export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
 export PATH="$PATH:$HOME/.local/share/coursier/bin"
 
 # ----------------------------------------------------
+# ASDF
+# ----------------------------------------------------
+
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
+
+# ----------------------------------------------------
 # Startship
 # ----------------------------------------------------
 
