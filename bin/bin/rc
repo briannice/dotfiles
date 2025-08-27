@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 <source_file.c>"
+    exit 1
+fi
+
+if [ ! -f "$1" ]; then
+    echo "Error: File '$1' not found."
+    exit 1
+fi
+
+TMPDIR=$(mktemp -d)
+
+BASENAME=$(basename "$1" .c)
+
+
+if ! gcc -ansi "$1" -o "$TMPDIR/$BASENAME" ; then
+    echo "Compilation failed."
+    rm -rf "$TMPDIR"
+    exit 1
+fi
+
+"$TMPDIR/$BASENAME"
+
+rm -rf "$TMPDIR"
