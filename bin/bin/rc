@@ -14,7 +14,7 @@ TMPDIR=$(mktemp -d)
 
 BASENAME=$(basename "$1" .c)
 
-if ! gcc -Wall -ansi "$1" -o "$TMPDIR/$BASENAME"; then
+if ! gcc -Wall -o "$TMPDIR/$BASENAME" "$1" -lm; then
   echo "Compilation failed."
   rm -rf "$TMPDIR"
   exit 1
