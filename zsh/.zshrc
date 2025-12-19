@@ -66,7 +66,8 @@ source "$HOME/.cargo/env"
 # Racket
 # ----------------------------------------------------
 
-export PLTCOLLECTS="$HOME/dev/vub/vub-ads3:$PLTCOLLECTS"
+#export PLTCOLLECTS="$HOME/dev/vub/vub-ads3/oef:$PLTCOLLECTS"
+export PLTCOLLECTS="$HOME/dev/vub/vub-ads-scheme/opdracht/:$PLTCOLLECTS"
 export PATH="$PATH:/usr/racket/bin"
 
 alias rkt="racket"
