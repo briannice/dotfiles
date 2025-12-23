@@ -17,82 +17,10 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # ----------------------------------------------------
-# Scripts
+# Bin
 # ----------------------------------------------------
 
 export PATH="$PATH:$HOME/bin"
-
-# ----------------------------------------------------
-# NVM
-# ----------------------------------------------------
-
-export NVM_DIR="$HOME/.config/nvm"
-
-if [ -s "$NVM_DIR/nvm.sh" ]; then
-    . "$NVM_DIR/nvm.sh"
-fi
-
-if [ -s "$NVM_DIR/bash_completion" ]; then
-    . "$NVM_DIR/bash_completion"
-fi
-
-# ----------------------------------------------------
-# PNPM
-# ----------------------------------------------------
-
-export PNPM_HOME="/home/brein/.local/share/pnpm"
-
-case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
-# ----------------------------------------------------
-# Golang
-# ----------------------------------------------------
-
-export PATH="$PATH:/usr/local/go/bin"
-export GOPATH="$HOME/dev/go"
-
-# ----------------------------------------------------
-# Rust
-# ----------------------------------------------------
-
-export PATH="$PATH:$HOME/.cargo/bin"
-
-source "$HOME/.cargo/env"
-
-# ----------------------------------------------------
-# Racket
-# ----------------------------------------------------
-
-#export PLTCOLLECTS="$HOME/dev/vub/vub-ads3/oef:$PLTCOLLECTS"
-#export PLTCOLLECTS="$HOME/dev/vub/vub-ads-scheme/opdracht/:$PLTCOLLECTS"
-export PLTCOLLECTS="$HOME/downloads/ADS3/Brian-Nys-0636503/:$PLTCOLLECTS"
-export PATH="$PATH:/usr/racket/bin"
-
-alias rkt="racket"
-alias r5rs="racket -I r5rs"
-alias r7rs="racket -I r7rs"
-
-# ----------------------------------------------------
-# Java
-# ----------------------------------------------------
-
-export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
-
-# ----------------------------------------------------
-# Scala
-# ----------------------------------------------------
-
-export PATH="$PATH:$HOME/.local/share/coursier/bin"
-
-# ----------------------------------------------------
-# ASDF
-# ----------------------------------------------------
-
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
 
 # ----------------------------------------------------
 # Startship
