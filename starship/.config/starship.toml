@@ -4,6 +4,10 @@ palette = "catppuccin_mocha"
 
 format = "$all$character"
 
+[directory]
+truncate_to_repo = false
+truncation_symbol = "./"
+
 [git_branch]
 symbol = " "
 
