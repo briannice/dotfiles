@@ -43,6 +43,14 @@ packages=(
     "bluez"
     "bluez-libs" 
     "bluez-utils"
+
+    # Audio
+    pipewire
+    pipewire-alsa
+    pipewire-pulse
+    pipewire-jack
+    wireplumber
+    pavucontrol
 )
 
 for item in "${packages[@]}"; do
