@@ -18,7 +18,7 @@ window#waybar {
   margin: 10px 5px 0 5px;
   padding: 6px 18px;
   border-radius: 10px;
-  opacity: 0.95;
+  opacity: 0.90;
   background-color: @crust;
   color: @mauve;
 }
