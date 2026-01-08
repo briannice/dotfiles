@@ -14,11 +14,17 @@ packages=(
     "hyprlang"
     "hyprlock"
     "hyprpaper"
+    "hyprpicker"
+    "hyprpolkitagent"
     "hyprsunset"
     "hyprtoolkit"
     "hyprutils"
     "waybar"
+    "dunst"
     "wofi"
+    "qt5-wayland"
+    "qt6-wayland"
+    "xdg-desktop-portal-hyprland"
 
     # General
     "ttf-cascadia-code-nerd"
@@ -27,14 +33,20 @@ packages=(
     "wget"
     "curl"
     "tree"
+    "cliphist"
+    "wl-clipboard"
+    "slurp"
+    "grim"
 
     # Applications
     "neovim"
     "visual-studio-code-bin"
     "firefox"
     "docker"
+    "discord"
     "dolphin"
     "kitty"
+    "spotify"
     "starship"
     "zsh"
 
@@ -45,12 +57,12 @@ packages=(
     "bluez-utils"
 
     # Audio
-    pipewire
-    pipewire-alsa
-    pipewire-pulse
-    pipewire-jack
-    wireplumber
-    pavucontrol
+    "pipewire"
+    "pipewire-alsa"
+    "pipewire-pulse"
+    "pipewire-jack"
+    "wireplumber"
+    "pavucontrol"
 )
 
 for item in "${packages[@]}"; do
