@@ -12,16 +12,16 @@ icon_position = left
 background = "#11111b"
 foreground = "#89b4fa"
 frame = "#89b4fa"
-timeout = 3
+timeout = 5
 
 [urgency_normal]
 background = "#11111b"
 foreground = "#cba6f7"
 frame = "#cba6f7"
-timeout = 3
+timeout = 5
 
 [urgency_critical]
 background = "#11111b"
 foreground = "#f38ba8"
 frame = "#f38ba8"
-timeout = 3
+timeout = 5
