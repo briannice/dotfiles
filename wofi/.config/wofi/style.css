@@ -52,7 +52,7 @@
 @define-color	crust-rgb  rgb(17, 17, 27);
 
 * {
-  font-family: 'CaskaydiaCove Nerd Font', monospace;
+  font-family: 'CaskaydiaCove Nerd Font';
   font-size: 16px;
 }
 
@@ -123,7 +123,7 @@ window {
 }
 
 #input * {
-  outline: 4px solid @red!important;
+  outline: 4px solid @red;
 }
 
 #text {
@@ -151,7 +151,7 @@ window {
 }
 
 #entry:drop(active) {
-  background-color: @lavender!important;
+  background-color: @lavender;
 }
 
 * {
@@ -226,7 +226,7 @@ window {
 }
 
 #input * {
-  outline: 4px solid @red!important;
+  outline: 4px solid @red;
 }
 
 #text {
@@ -254,5 +254,5 @@ window {
 }
 
 #entry:drop(active) {
-  background-color: @lavender!important;
+  background-color: @lavender;
 }
