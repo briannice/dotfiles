@@ -8,9 +8,8 @@ packages=(
     # Hyprland
     "hyprcursor"
     "hyprgraphics"
+    "hyprland"
     "hypridle"
-    "hyprland"
-    "hyprland"
     "hyprlang"
     "hyprlock"
     "hyprpaper"
