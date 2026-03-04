@@ -22,6 +22,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 
 # -----------------------------
+# Racket
+# -----------------------------
+
+export PLTCOLLECTS="$HOME/dev/vub/vub-ads-scheme/oef:$PLTCOLLECTS"
+
+# -----------------------------
 # Starship
 # -----------------------------
 

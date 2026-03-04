@@ -1,0 +1,19 @@
+#!/bin/bash
+
+laptop_screen="eDP-1"
+hdmi_screen="HDMI-A-1"
+
+case $1 in
+    laptop)
+        hyprctl keyword monitor "$laptop_screen,preferred,auto,1.5"
+        hyprctl keyword monitor "$hdmi_screen,disable"
+        ;;
+    smon)
+        hyprctl keyword monitor "$hdmi_screen,preferred,auto,2"
+        hyprctl keyword monitor "$laptop_screen,disable"
+        ;;
+    *)
+        echo "Argument 1 missing: profile = [laptop | smon]"
+        exit 1
+        ;;
+esac
