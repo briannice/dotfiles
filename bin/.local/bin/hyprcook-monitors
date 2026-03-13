@@ -9,7 +9,7 @@ case $1 in
         hyprctl keyword monitor "$hdmi_screen,disable"
         ;;
     smon)
-        hyprctl keyword monitor "$hdmi_screen,preferred,auto,2"
+        hyprctl keyword monitor "$hdmi_screen,preferred,auto,1"
         hyprctl keyword monitor "$laptop_screen,disable"
         ;;
     *)
