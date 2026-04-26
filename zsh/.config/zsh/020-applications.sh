@@ -19,7 +19,11 @@ export GOPATH="$HOME/dev/go"
 
 export NVM_DIR="$HOME/.nvm"
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+# shellcheck disable=SC1091
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# shellcheck disable=SC1091
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # -----------------------------
 # Racket
