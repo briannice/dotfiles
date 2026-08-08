@@ -17,12 +17,31 @@ local browser = "firefox"
 local menu = "wofi --show drun --conf=~/.config/wofi/wofi.conf"
 local colorPicker = "hyprpicker -a -n -l"
 
+local screen_laptop = "eDP-1"
+local screen_hdmi1 = "HDMI-A-1"
+
 -- -------------------------
 -- Cursor
 -- -------------------------
 
 hl.env("XCURSOR_SIZE", 24)
 hl.env("HYPRCURSOR_SIZE", 24)
+
+-- -------------------------
+-- Monitors
+-- -------------------------
+
+hl.monitor({
+    output = screen_laptop,
+    mode = "preferred",
+    position = "auto",
+    scale = 1.5
+})
+
+hl.monitor({
+    output = screen_hdmi1,
+    disabled = true
+})
 
 -- -------------------------
 -- Execute programs
@@ -41,6 +60,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
     hl.exec_cmd("wl-paste --type image --watch cliphist store")
 end)
+
 
 -- -------------------------
 -- Input
@@ -148,16 +168,14 @@ hl.curve("easeInOutCirc", { type = "bezier", points = { { 0.85, 0 }, { 0.15, 1 }
 hl.curve("easeOutCirc", { type = "bezier", points = { { 0, 0.55 }, { 0.45, 1 } } })
 hl.curve("easeOutExpo", { type = "bezier", points = { { 0.16, 1 }, { 0.3, 1 } } })
 
-hl.animation({ leaf = "windows", enabled = true, speed = 1, bezier = "md3_decel", style = "popin 60%" })
-hl.animation({ leaf = "border", enabled = true, speed = 1, bezier = "default" })
-hl.animation({ leaf = "fade", enabled = true, speed = 1, bezier = "md3_decel" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 1, bezier = "easeOutExpo", style = "slide" })
-hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 1, bezier = "md3_decel", style = "slidevert" })
+hl.animation({ leaf = "windows", enabled = true, speed = 2, bezier = "md3_decel", style = "popin 60%" })
+hl.animation({ leaf = "border", enabled = true, speed = 2, bezier = "default" })
+hl.animation({ leaf = "fade", enabled = true, speed = 2, bezier = "md3_decel" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 2, bezier = "easeOutExpo", style = "slide" })
+hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 2, bezier = "md3_decel", style = "slidevert" })
 
 hl.config({
     misc = {
         disable_hyprland_logo = true
     }
 })
-
-hl.exec_cmd("hyprcook-monitors laptop")
