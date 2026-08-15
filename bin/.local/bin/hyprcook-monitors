@@ -3,19 +3,80 @@
 laptop_screen="eDP-1"
 hdmi_screen="HDMI-A-1"
 
-case "$1" in
+restart_hypr_services() {
+    killall -9 waybar &>/dev/null
+    killall -9 hyprpaper &>/dev/null
+
+    sleep 0.5
+
+    waybar &>/dev/null & disown
+    hyprpaper &>/dev/null & disown
+}
+
+case "${1:-}" in
     laptop)
-        hyprctl eval "hl.monitor({ output = '$laptop_screen', mode = 'preferred', position = 'auto', scale = 1.5 })"
-        hyprctl eval "hl.monitor({ output = '$hdmi_screen', disabled = true })"
+        hyprctl eval "
+            hl.monitor({
+                output = \"$laptop_screen\",
+                mode = \"preferred\",
+                position = \"auto\",
+                scale = 1.5,
+                disabled = false
+            })
+
+            hl.monitor({
+                output = \"$hdmi_screen\",
+                disabled = true
+            })
+        " &>/dev/null
+
+        restart_hypr_services
         ;;
 
     smon)
-        hyprctl eval "hl.monitor({ output = '$hdmi_screen', mode = 'preferred', position = 'auto', scale = 2 })"
-        hyprctl eval "hl.monitor({ output = '$laptop_screen', disabled = true })"
+        hyprctl eval "
+            hl.monitor({
+                output = \"$hdmi_screen\",
+                mode = \"preferred\",
+                position = \"auto\",
+                scale = 1,
+                disabled = false
+            })
+
+            hl.monitor({
+                output = \"$laptop_screen\",
+                disabled = true
+            })
+        " &>/dev/null
+
+        restart_hypr_services
+        ;;
+
+    duplicate)
+        hyprctl eval "
+            hl.monitor({
+                output = \"$laptop_screen\",
+                mode = \"preferred\",
+                position = \"auto\",
+                scale = 1.5,
+                disabled = false
+            })
+
+            hl.monitor({
+                output = \"$hdmi_screen\",
+                mode = \"preferred\",
+                position = \"auto\",
+                scale = 1,
+                mirror = \"$laptop_screen\",
+                disabled = false
+            })
+        " &>/dev/null
+
+        restart_hypr_services
         ;;
 
     *)
-        echo "Argument 1 missing: profile = [laptop | smon]"
+        echo "Usage: $0 {laptop|smon|duplicate}"
         exit 1
         ;;
 esac

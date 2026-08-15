@@ -31,17 +31,48 @@ hl.env("HYPRCURSOR_SIZE", 24)
 -- Monitors
 -- -------------------------
 
+-- hl.monitor({
+--     output = screen_laptop,
+--     mode = "preferred",
+--     position = "auto",
+--     scale = 1.5,
+--     disabled = false
+-- })
+
+-- hl.monitor({
+--     output = screen_hdmi1,
+--     disabled = true
+-- })
+
 hl.monitor({
     output = screen_laptop,
-    mode = "preferred",
-    position = "auto",
-    scale = 1.5
+    disabled = true
 })
 
 hl.monitor({
     output = screen_hdmi1,
-    disabled = true
+    mode = "preferred",
+    position = "auto",
+    scale = 1,
+    disabled = false
 })
+
+-- hl.monitor({
+--     output = screen_laptop,
+--     mode = "preferred",
+--     position = "auto",
+--     scale = 1.5,
+--     disabled = false
+-- })
+
+-- hl.monitor({
+--     output = screen_hdmi1,
+--     mode = "preferred",
+--     position = "auto",
+--     scale = 1,
+--     mirror = screen_laptop,
+--     disabled = false
+-- })
 
 -- -------------------------
 -- Execute programs
@@ -122,8 +153,8 @@ for i = 1, 7 do
     hl.bind("SUPER + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
 end
 
-hl.bind("SUPER + SHIFT + right", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("SUPER + SHIFT + left", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind("SUPER + SHIFT + right", hl.dsp.focus({ workspace = "+1" }))
+hl.bind("SUPER + SHIFT + left", hl.dsp.focus({ workspace = "-1" }))
 
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("hyprctl hyprsunset gamma -10"))
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("hyprctl hyprsunset gamma +10"))
