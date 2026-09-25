@@ -31,31 +31,31 @@ hl.env("HYPRCURSOR_SIZE", 24)
 -- Monitors
 -- -------------------------
 
--- hl.monitor({
---     output = screen_laptop,
---     mode = "preferred",
---     position = "auto",
---     scale = 1.5,
---     disabled = false
--- })
-
--- hl.monitor({
---     output = screen_hdmi1,
---     disabled = true
--- })
-
 hl.monitor({
     output = screen_laptop,
-    disabled = true
+    mode = "preferred",
+    position = "auto",
+    scale = 1.5,
+    disabled = false
 })
 
 hl.monitor({
     output = screen_hdmi1,
-    mode = "preferred",
-    position = "auto",
-    scale = 1,
-    disabled = false
+    disabled = true
 })
+
+-- hl.monitor({
+--     output = screen_laptop,
+--     disabled = true
+-- })
+
+-- hl.monitor({
+--     output = screen_hdmi1,
+--     mode = "preferred",
+--     position = "auto",
+--     scale = 1,
+--     disabled = false
+-- })
 
 -- hl.monitor({
 --     output = screen_laptop,
