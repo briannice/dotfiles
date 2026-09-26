@@ -48,3 +48,8 @@ hl.config({
 --     column_width = 0.97,
 --   },
 -- })
+
+hl.window_rule({
+    match = { class = "code" },
+    opacity = "1.0 override 1.0 override",
+})
