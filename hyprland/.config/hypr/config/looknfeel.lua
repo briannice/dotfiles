@@ -8,14 +8,24 @@ hl.config({
 
 hl.config({
     decoration = {
-        dim_inactive = true,
-        dim_strength = 0.15,
+        dim_inactive = false,
+        -- dim_strength = 0.15,
     },
 })
 
-hl.animation({ leaf = "workspaces", enabled = true, speed = 1.39, bezier = "almostLinear" })
+hl.animation({
+    leaf = "workspaces",
+    enabled = true,
+    speed = 1.39,
+    bezier = "almostLinear"
+})
 
 hl.window_rule({
-    match = { class = "code" },
+    match = { class = ".*" },
     opacity = "1.0 override 1.0 override",
+})
+
+hl.window_rule({
+    match = { class = "foot" },
+    opacity = "0.9 override 0.9 override",
 })
